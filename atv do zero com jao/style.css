@@ -1,0 +1,496 @@
+
+:root {
+    --cor-fundo: #0B0B0B;
+    --cor-fundo-secundario: #181818;
+    --cor-superficie: #151515;
+
+    --cor-cafe: #8B1E1E;
+    --cor-cafe-escuro: #450B0B;
+
+    --cor-terracota: #E85D04;
+    --cor-terracota-claro: #FF7926;
+
+    --cor-trigo: #F5F5F5;
+    --cor-texto: #F5F5F5;
+    --cor-texto-secundario: #A5A5A5;
+
+    --cor-borda: #333333;
+    --cor-branco: #FFFFFF;
+
+    --cor-sucesso: #73765A;
+    --cor-erro: #A83232;
+
+    --rose: #E85D04;
+    --rose-claro: #FFB36B;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--cor-fundo);
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+#BemVindo {
+    flex: 0 0 50%;
+    width: 50%;
+    min-height: 100vh;
+    padding: 12vh 5.5%;
+
+    background-color: var(--cor-cafe-escuro);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#BemVindo h1 {
+    max-width: 480px;
+    margin-bottom: 24px;
+
+    font-family: Georgia, serif;
+    font-size: clamp(40px, 4vw, 72px);
+    font-weight: bold;
+    line-height: 0.98;
+
+    color: var(--cor-branco);
+}
+
+#BemVindo p {
+    max-width: 390px;
+    margin-bottom: 24px;
+
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+
+    color: var(--cor-texto);
+}
+
+#BemVindo br {
+    display: none;
+}
+
+#loginArea {
+    flex: 0 0 50%;
+    width: 50%;
+    min-height: 100vh;
+    padding: 40px 4%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--cor-fundo);
+}
+
+#Inputlogin {
+    width: 100%;
+    max-width: 465px;
+    min-height: 80vh;
+    padding: 45px 40px;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--cor-fundo-secundario);
+    border: 1px solid var(--cor-borda);
+    border-radius: 10px;
+}
+
+#Inputlogin p:first-child {
+    margin-bottom: 18px;
+
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+
+    color: var(--cor-terracota);
+}
+
+#Inputlogin h1 {
+    margin-bottom: 16px;
+
+    font-family: Georgia, serif;
+    font-size: clamp(32px, 2.8vw, 48px);
+    font-weight: bold;
+    line-height: 1.05;
+
+    color: var(--cor-terracota);
+}
+
+#Inputlogin h1+p {
+    margin-bottom: 22px;
+
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+
+    color: var(--cor-texto-secundario);
+}
+
+#Inputlogin h2 {
+    margin-top: 16px;
+    margin-bottom: 10px;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+
+    color: var(--cor-branco);
+}
+
+#Inputlogin input[type="email"],
+#Inputlogin input[type="password"] {
+    width: 100%;
+    min-height: 46px;
+    margin: 0;
+    padding: 12px 14px;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+
+    color: var(--cor-texto);
+    background-color: var(--cor-superficie);
+
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    outline: none;
+}
+
+#Inputlogin input[type="email"]:focus,
+#Inputlogin input[type="password"]:focus {
+    border-color: var(--cor-terracota);
+    box-shadow: 0 0 0 3px rgba(232, 93, 4, 0.12);
+}
+
+#LembreArea {
+    width: 100%;
+    margin-top: 19px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#LembrarCheck {
+    width: 16px;
+    height: 16px;
+    margin: 0;
+
+    accent-color: var(--cor-terracota);
+    flex-shrink: 0;
+}
+
+#LembreArea p {
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+
+    color: var(--cor-texto-secundario);
+}
+
+#Esqueceu {
+    margin-left: auto;
+
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    white-space: nowrap;
+
+    color: var(--cor-terracota);
+    text-decoration: none;
+}
+
+#Esqueceu:hover {
+    color: var(--cor-terracota-claro);
+    transition: 0.3s;
+}
+
+.Entrar {
+    width: 100%;
+    min-height: 50px;
+    margin-top: 24px;
+    padding: 14px;
+
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+
+    color: var(--cor-branco);
+    background-color: var(--cor-cafe);
+
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+
+    transition: background-color 0.3s;
+}
+
+.Entrar:hover {
+    background-color: var(--cor-terracota);
+}
+
+.Entrar+h2 {
+    margin-top: 22px;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+
+    color: var(--cor-texto);
+}
+
+#Criar {
+    color: var(--cor-terracota);
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+#Criar:hover {
+    color: var(--cor-terracota-claro);
+}
+
+#VoltarLogin {
+    color: var(--cor-terracota);
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+#VoltarLogin:hover {
+    color: var(--cor-terracota-claro);
+}
+
+#CriarConta {
+    display: none;
+    flex: 0 0 50%;
+    width: 50%;
+    min-height: 100vh;
+    padding: 40px 4%;
+
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--cor-fundo);
+}
+
+.InputTXTCadastro {
+    margin-bottom: 16px;
+
+    font-family: Georgia, serif;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1.05;
+
+    color: var(--cor-terracota);
+}
+
+#CriarConta.ativa {
+    display: flex;
+}
+
+#loginArea.escondido {
+    display: none;
+}
+
+#InputCadastro {
+    width: 100%;
+    max-width: 465px;
+    min-height: 80vh;
+    padding: 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: var(--cor-fundo-secundario);
+    border: 1px solid var(--cor-borda);
+    border-radius: 10px;
+}
+
+#InputCadastro>h2 {
+    margin-top: 16px;
+    margin-bottom: 10px;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+
+    color: var(--cor-branco);
+}
+
+#InputCadastro p {
+    margin-bottom: 22px;
+
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+
+    color: var(--cor-texto-secundario);
+}
+
+#InputCadastro input[type="text"],
+#InputCadastro input[type="email"],
+#InputCadastro input[type="password"] {
+    width: 100%;
+    min-height: 44px;
+    margin: 0;
+    padding: 12px 14px;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+
+    color: var(--cor-texto);
+    background-color: var(--cor-superficie);
+
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    outline: none;
+}
+
+#InputCadastro input[type="text"]:focus,
+#InputCadastro input[type="email"]:focus,
+#InputCadastro input[type="password"]:focus {
+    border-color: var(--cor-terracota);
+    box-shadow: 0 0 0 3px rgba(232, 93, 4, 0.12);
+}
+
+#InputCadastro .Entrar {
+    width: 100%;
+    min-height: 50px;
+    margin-top: 22px;
+    padding: 14px;
+
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+
+    color: var(--cor-branco);
+    background-color: var(--cor-cafe);
+
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+
+    transition: background-color 0.3s;
+}
+
+#InputCadastro .Entrar:hover {
+    background-color: var(--cor-terracota);
+}
+
+#InputCadastro>p:last-child {
+    margin-top: 18px;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+
+    color: var(--cor-texto-secundario);
+}
+
+@media (max-width: 800px) {
+    body {
+        flex-direction: column;
+    }
+
+    #BemVindo,
+    #loginArea,
+    #CriarConta {
+        width: 100%;
+        flex: 0 0 auto;
+        min-height: auto;
+    }
+
+    #BemVindo {
+        padding: 50px 7%;
+    }
+
+    #loginArea,
+    #CriarConta {
+        padding: 30px 5%;
+    }
+
+    #Inputlogin,
+    #InputCadastro {
+        min-height: auto;
+        padding: 30px 25px;
+    }
+}
+
+#telefone {
+    width: 100%;
+    min-height: 46px;
+    margin: 0;
+    padding: 12px 14px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: var(--cor-texto);
+    background-color: var(--cor-superficie);
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    outline: none;
+}
+
+#TemaBotao {
+    padding: 9px 13px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--cor-branco);
+    background-color: var(--cor-cafe);
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+#TemaBotao:hover {
+    background-color: var(--cor-terracota);
+}
+
+#TemaBotao:focus-visible {
+    outline: 2px solid var(--cor-terracota);
+    outline-offset: 3px;
+}
+
+body.modo-claro {
+    color-scheme: light;
+
+    --cor-fundo: #F5F1EC;
+    --cor-fundo-secundario: #FFFFFF;
+    --cor-superficie: #FAF8F5;
+
+    --cor-cafe-escuro: #EAD9CD;
+
+    --cor-texto: #302923;
+    --cor-texto-secundario: #756B63;
+
+    --cor-borda: #DED6CE;
+}
+
+body.modo-claro #BemVindo h1,
+body.modo-claro #BemVindo p {
+    color: #302923;
+}
+
+body.modo-claro #Inputlogin h2,
+body.modo-claro #InputCadastro>h2 {
+    color: #302923;
+}

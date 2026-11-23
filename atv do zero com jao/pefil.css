@@ -1,0 +1,234 @@
+
+:root {
+    --cor-fundo: #0B0B0B;
+    --cor-fundo-secundario: #181818;
+    --cor-superficie: #151515;
+
+    --cor-cafe: #8B1E1E;
+    --cor-cafe-escuro: #450B0B;
+
+    --cor-terracota: #E85D04;
+    --cor-terracota-claro: #FF7926;
+
+    --cor-trigo: #F5F5F5;
+    --cor-texto: #F5F5F5;
+    --cor-texto-secundario: #A5A5A5;
+
+    --cor-borda: #333333;
+    --cor-branco: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--cor-fundo);
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 98;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    min-height: 110px;
+    padding: 15px 6%;
+
+    background-color: var(--cor-superficie);
+    border-bottom: 1px solid var(--cor-borda);
+
+    flex-shrink: 0;
+}
+
+#logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3px;
+    color: var(--cor-terracota);
+}
+
+header ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 35px;
+    list-style: none;
+}
+
+header li {
+    display: flex;
+    align-items: center;
+}
+
+header li img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    transition: 0.3s;
+}
+
+header li img:hover {
+    transform: scale(1.1);
+}
+
+a {
+    color: var(--cor-branco);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+#PerfilArea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    width: 500px;
+    max-width: 90%;
+    min-height: 500px;
+
+    padding: 40px;
+    align-self: center;
+    margin-top: 5%;
+
+    background-color: var(--cor-cafe-escuro);
+    border: 1px solid var(--cor-borda);
+    border-radius: 25px;
+
+    color: var(--cor-branco);
+}
+
+#PerfilArea h1 {
+    font-size: 32px;
+    color: var(--cor-terracota);
+}
+
+#inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 12px;
+}
+
+#inputs label {
+    width: 80%;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--cor-branco);
+}
+
+#inputs input {
+    width: 80%;
+    min-height: 45px;
+    padding: 10px 14px;
+
+    border: 1px solid var(--cor-borda);
+    border-radius: 10px;
+
+    background-color: var(--cor-superficie);
+    color: var(--cor-branco);
+
+    outline: none;
+}
+
+#inputs input:focus {
+    border-color: var(--cor-terracota);
+    box-shadow: 0 0 8px rgba(232, 93, 4, 0.2);
+}
+
+#TemaBotao {
+    padding: 9px 13px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #FFFFFF;
+    background-color: var(--cor-cafe);
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+#TemaBotao:hover {
+    background-color: var(--cor-terracota);
+}
+
+#TemaBotao:focus-visible {
+    outline: 2px solid var(--cor-terracota);
+    outline-offset: 3px;
+}
+
+body.modo-claro {
+    color-scheme: light;
+
+    --cor-fundo: #F5F1EC;
+    --cor-fundo-secundario: #FFFFFF;
+    --cor-superficie: #FFFFFF;
+
+    --cor-cafe-escuro: #FFFFFF;
+
+    --cor-terracota: #C54E00;
+    --cor-terracota-claro: #E85D04;
+
+    --cor-trigo: #302923;
+    --cor-texto: #302923;
+    --cor-texto-secundario: #756B63;
+
+    --cor-borda: #DED6CE;
+    --cor-branco: #302923;
+}
+
+body.modo-claro #PerfilArea {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+body.modo-claro #TemaBotao {
+    color: #FFFFFF;
+}
+
+@media (max-width: 500px) {
+    #PerfilArea {
+        padding: 30px 15px;
+    }
+
+    #inputs label,
+    #inputs input {
+        width: 95%;
+    }
+
+    header {
+        padding: 15px 4%;
+    }
+
+    header ul {
+        gap: 15px;
+    }
+
+    #TemaBotao {
+        font-size: 11px;
+        padding: 8px;
+    }
+}

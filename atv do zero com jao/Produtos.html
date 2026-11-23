@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System of a bg</title>
+
+    <link rel="stylesheet" href="Produtos.css">
+    <script src="Produtos.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+
+        <div id="LogoProdutos">
+            <img src="" alt="">
+            <h1>
+                System of a Burger
+            </h1>
+        </div>
+
+        <div id="ItensHeader">
+
+            <ul>
+                <li>
+                    <a href="Produtos.html">Produtos</a>
+                </li>
+
+                <li>
+                    <button id="TemaBotao" type="button" aria-label="Ativar modo claro" aria-pressed="false">
+                        ☀️ Modo claro
+                    </button>
+                </li>
+
+                <li>
+                    <button id="CarrinhoLink" type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="9" cy="20" r="1" />
+                            <circle cx="19" cy="20" r="1" />
+                            <path d="M2 3h2l2.4 11.4a2 2 0 0 0 2 1.6h9.8a2 2 0 0 0 2-1.6L22 7H5" />
+                        </svg>
+                    </button>
+                </li>
+
+                <li>
+                    <a href="perfil.html">
+                        <img src="imgs/user 1.png" alt="Usuário">
+                    </a>
+                </li>
+            </ul>
+
+            <div class="procurar_conteiner">
+                <input type="text" id="procurar_input" placeholder="digite para pesquisar">
+            </div>
+
+        </div>
+
+    </header>
+
+    <div id="Produtos">
+
+        <div id="ProdutosListas">
+
+            <div class="CategoriaTXT">
+                <h2>Hamburgers</h2>
+            </div>
+
+            <ul id="Hamburgers">
+
+                <li>
+                    <img src="imgs/burger1.png" alt="Arial Burger">
+                    <h2>arial burger</h2>
+                    <h4>R$ 19,90</h4>
+                    <button type="button">Adicionar ao carrinho</button>
+                </li>
+
+                <li>
+                    <img src="imgs/burger2.png" alt="Sugar Burger">
+                    <h2>sugar burger</h2>
+                    <h4>R$ 19,70</h4>
+                    <button type="button">Adicionar ao carrinho</button>
+                </li>
+
+            </ul>
+
+            <div class="CategoriaProdutos">
+
+                <div class="CategoriaTXT">
+                    <h2>acompanhamentos</h2>
+                </div>
+
+                <ul id="Acompanhamento">
+
+                    <li>
+                        <img src="imgs/acompanhamento1.png" alt="Metal Onion">
+                        <h2>metal onion</h2>
+                        <h4>R$ 10,00</h4>
+                        <button type="button">Adicionar ao carrinho</button>
+                    </li>
+
+                    <li>
+                        <img src="imgs/acompanhamento2.png" alt="Red Hot Potato">
+                        <h2>red hot potato</h2>
+                        <h4>R$ 15,90</h4>
+                        <button type="button">Adicionar ao carrinho</button>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div class="CategoriaProdutos">
+
+                <div class="CategoriaTXT">
+                    <h2>bebidas</h2>
+                </div>
+
+                <ul id="Bebidas">
+
+                    <li>
+                        <img src="imgs/bebida1.png" alt="Chopp">
+                        <h2>Chopp</h2>
+                        <h4>R$ 12,50</h4>
+                        <button type="button">Adicionar ao carrinho</button>
+                    </li>
+
+                    <li>
+                        <img src="imgs/bebida2.png" alt="Refrigerante">
+                        <h2>Refrigerante</h2>
+                        <h4>R$ 8,00</h4>
+                        <button type="button">Adicionar ao carrinho</button>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="carrinho">
+
+        <div id="IntroCarrinho">
+            <h2>Meu carrinho</h2>
+
+            <button id="FecharCarrinho" type="button">X</button>
+        </div>
+
+        <div id="ProdutosCarrinho">
+            <p id="CarrinhoVazio">Seu carrinho ainda está vazio.</p>
+        </div>
+
+        <div id="ResumoCarrinho">
+
+            <div id="LinhaTotalCarrinho">
+                <span>Total:</span>
+                <strong id="TotalCarrinho">R$ 0,00</strong>
+            </div>
+
+            <button id="FinalizarPedido" type="button">
+                Finalizar pedido
+            </button>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

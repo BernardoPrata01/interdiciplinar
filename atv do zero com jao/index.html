@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>system bg</title>
+</head>
+
+<body>
+    <header>
+        <div id="LogoProdutos">
+            <img src="" alt="">
+            <h1>
+                System of a Burger
+            </h1>
+        </div>
+
+        <div id="ItensHeader">
+            <ul>
+                <li>
+                    <button type="button" id="TemaBotao" aria-label="Ativar modo claro" aria-pressed="false">
+                        ☀️ Modo claro
+                    </button>
+                </li>
+
+                <li>
+                    <a href="Produtos.html">
+                        Produtos
+                    </a>
+                </li>
+
+                <li>
+                    <a href="perfil.html">
+                        <img src="imgs/user 1.png" alt="Usuário">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <section id="BemVindo">
+        <h1>Bem-vindo de volta!</h1>
+        <p>Cada Hamburguer representa sua banda preferida</p>
+        <br>
+        <p>Entre em sua conta e mantenha seus pedidos, favoritos e preferências sempre por perto</p>
+    </section>
+
+    <section id="loginArea">
+        <div id="Inputlogin">
+            <p>ACESSO A SUA CONTA</p>
+
+            <h1>Entre na <br> sua conta</h1>
+
+            <p>use seu e-mail e senha para continuar.</p>
+
+            <h2>E-mail</h2>
+            <input type="email" id="EmailLogin" name="email" placeholder="seu@email.com">
+
+            <h2>telefone</h2>
+            <input type="text" id="telefone" placeholder="(31) 9999-99999" oninput="formartar_telefone()">
+
+            <h2>Senha</h2>
+            <input type="password" id="SenhaLogin" name="Senha" placeholder="Digite sua senha">
+
+            <div id="LembreArea">
+                <input type="checkbox" id="LembrarCheck">
+                <p>Lembrar de mim</p>
+
+                <a href="" id="Esqueceu">Esqueceu sua senha?</a>
+            </div>
+
+            <button type="button" class="Entrar" id="Entrar">Entrar</button>
+
+            <h2>Não tem uma conta? <a id="Criar">Criar uma</a></h2>
+        </div>
+    </section>
+
+    <section id="CriarConta">
+
+        <div id="InputCadastro">
+            <h1 class="InputTXTCadastro">Comece por aqui</h1>
+            <h1 class="InputTXTCadastro">Crie sua conta</h1>
+
+            <p>
+                Preencha seus dados para acompanhar seus pedidos
+                <br> e guardar seus favoritos.
+            </p>
+
+            <h2>Nome</h2>
+            <input type="text" id="NomeCadastro" name="Nome" placeholder="Seu nome">
+
+            <h2>E-mail</h2>
+            <input type="email" id="EmailCadastro" name="email" placeholder="seu@email.com">
+
+            <h2>Endereço</h2>
+            <input type="text" id="EnderecoCadastro" name="Endereco" placeholder="Seu endereço">
+
+            <h2>Senha</h2>
+            <input type="password" id="SenhaCadastro" name="SenhaNova" placeholder="Crie uma senha">
+
+            <h2>Confirmar Senha</h2>
+            <input type="password" id="ConfirmarNovaSenha" name="ConfirmarNovaSenha" placeholder="Repita sua senha">
+
+            <button type="button" class="Entrar" id="Cadastrar">Criar conta</button>
+
+            <p>Já tem uma conta? <a id="VoltarLogin">Entrar</a></p>
+        </div>
+
+    </section>
+
+</body>
+
+</html>
